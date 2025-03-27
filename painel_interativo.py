@@ -45,7 +45,7 @@ for eta_dir in base_dir.glob("ETA_*"):
             continue
         video_file = video_files[0]
         video_out_name = f"video_ETA_{eta_val}_LAMBDA_{lambda_val}.mp4"
-        shutil.copy(video_file, videos_dir / video_out_name)
+        shutil.copy2(video_file, videos_dir / video_out_name)
 
         painel_info.append((eta_val, lambda_val, frame_out_name, video_out_name))
 
