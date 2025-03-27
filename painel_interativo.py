@@ -93,6 +93,7 @@ print("\n✅ Painel atualizado com sucesso em: painel/painel_interativo.html")
 
 # Git commit e push automaticamente
 try:
+    subprocess.run(["git", "add", "-f", "painel/videos/*.mp4"], shell=True)
     subprocess.run(["git", "add", "."], check=True)
     subprocess.run(["git", "commit", "-m", "Atualiza painel com novas simulações"], check=True)
     subprocess.run(["git", "push"], check=True)
